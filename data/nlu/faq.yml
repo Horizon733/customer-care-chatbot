@@ -1,0 +1,35 @@
+version: "2.0"
+
+nlu:
+- intent: faq/shipping_duration
+  examples: |
+    - how much time does it take for delivery
+    - what's shipping duration
+    - shipping time and duration
+    - how long does it take for product to ship
+    - when will my product be delivered
+
+- intent: faq/payment_modes
+  examples: |
+    - what are payment modes you support
+    - do you support UPI payments?
+    - can I pay on delivery?
+    - is COD available
+    - wallet payment mode
+
+- intent: faq/return_policy
+  examples: |
+    - what are rules for returning a product
+    - how do I return a product
+    - am I eligible to return a product
+    - when can I return something
+    - guidelines for returning a product
+    - return policy
+
+- intent: faq/track_product
+  examples: |
+    - how do I track my product
+    - where can I track my product
+    - can you track my product
+    - product tracking
+    - process for tracking my product

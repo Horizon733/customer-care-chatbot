@@ -1,0 +1,41 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: faq
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: out of scope
+  steps:
+  - intent: outofscope
+  - action: utter_outofscope
+
+- rule: Activate, contact us form
+  condition:
+  - active_loop: null
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form
+
+- rule: Deactivate contact us form
+  condition:
+  - active_loop: contact_us_form
+  steps:
+  - action: contact_us_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_contact_us_form

@@ -1,0 +1,23 @@
+version: "2.0"
+
+stories:
+
+- story: chitchat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chitchat
+  - action: utter_chitchat
+
+- story: faq
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq
+  - action: utter_faq
+
+- story: contact us form
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form

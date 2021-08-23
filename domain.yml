@@ -1,0 +1,119 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - faq
+  - chitchat
+  - contact_us
+  - outofscope
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  email:
+    type: text
+    influence_conversation: false
+  phone_number:
+    type: text
+    influence_conversation: false
+  message:
+    type: text
+    influence_conversation: false
+  confirm_details:
+    type: any
+    influence_conversation: false
+
+entities:
+- email
+- number
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_chitchat/mood_unhappy:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_chitchat/mood_great:
+  - text: "Great, carry on!"
+
+  utter_chitchat/bot_challenge:
+    - text: "I am a bot, powered by Droid City."
+
+  utter_faq/shipping_duration:
+  - text: "Standard Shipping usually takes about 5-7 business days. Premium Shipping takes about 2-3 business days."
+
+  utter_faq/payment_modes:
+  - text: "Payment mode we are supporting:\nCOD\nDebit/Credit cards\nEMI\nWallets."
+
+  utter_faq/track_product:
+  - text: "You can track your product from accounts -> Orders. There you will find list of orders and select one of them to track."
+
+  utter_faq/return_policy:
+  - text: "If you received a product and want to return it. You can return within 14 days of delivery date."
+
+  utter_outofscope:
+  - text: "Sorry, I wasn't able to understand. Could you please rephrase it?"
+
+  utter_ask_name:
+  - text: "Could you please tell me your name?"
+
+  utter_ask_email:
+  - text: "Can you please provide me your email address?"
+
+  utter_ask_phone_number:
+  - text: "Can you please provide me your phone number?"
+
+  utter_ask_message:
+  - text: "Please tell me your query so I can forward that to our team."
+
+  utter_ask_confirm_details:
+  - buttons:
+    - title: Yes
+      payload: Yes
+    - title: No
+      payload: No
+    text: "These are the details I captured. Please confirm them below:\n Name: {name}\nEmail: {email}\nPhone No: {phone_number}\nMessage: {message}"
+
+  utter_mail_success:
+  - text: "I have mailed all details to our team. You will be reverted back within 48hrs."
+
+  utter_mail_canceled:
+  - text: "I have canceled the mail. Anything else you want help with?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+actions:
+- validate_contact_us_form
+- action_submit_contact_us_form
+
+forms:
+  contact_us_form:
+    required_slots:
+      name:
+      - type: from_text
+      email:
+      - type: from_entity
+        entity: email
+      phone_number:
+      - type: from_entity
+        entity: number
+      message:
+      - type: from_text
+      confirm_details:
+      - intent: affirm
+        value: yes
+        type: from_intent
+      - intent: deny
+        value: no
+        type: from_intent
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
