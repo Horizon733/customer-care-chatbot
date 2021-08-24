@@ -1,0 +1,6 @@
+# python
+python==3.7.5
+
+# rasa
+rasa==2.8.1
+rasa-sdk==2.8.1
