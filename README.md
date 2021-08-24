@@ -11,6 +11,4 @@
   <img src="https://img.shields.io/github/repo-size/horizon733/customer-care-chatbot">
 </p>
 
-## How to build this?
-**Check out this [tutorial](https://youtu.be/u6xOgR3jEMU)**
 
