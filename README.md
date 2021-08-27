@@ -33,7 +33,7 @@ cd /customer-care-chatbot
 pipenv install
 ```
 
-## Testing
+## 🧪 Testing
 - Train bot
 ```
 rasa train
