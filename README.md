@@ -15,7 +15,8 @@
 - [x] Basic E-commerce FAQ
 - [x] Basic chitchats
 - [x] Out of Scope
-- [x] Contact us form  
+- [x] Contact us form
+- [x] Send Emails
 
 ## ⚡ Quick Setup
 - Initialize a virtual environment via:
