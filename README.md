@@ -51,4 +51,7 @@ rasa run --enable-api --cors "*" --debug[Optional] -p {PORT}[optional]
 ```
 rasa run actions -p {PORT}[Optional]
 ```
- 
+
+## Tutorial links:
+[Build customer care chatbot from scratch](https://youtu.be/u6xOgR3jEMU)
+[Send email from Rasa chatbot](https://youtu.be/UcbNmZA65pw)
