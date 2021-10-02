@@ -8,6 +8,7 @@ nlu:
     - shipping time and duration
     - how long does it take for product to ship
     - when will my product be delivered
+    - how accurate is the estimation of delivery date?
 
 - intent: faq/payment_modes
   examples: |
@@ -16,6 +17,7 @@ nlu:
     - can I pay on delivery?
     - is COD available
     - wallet payment mode
+    - is GPay, PayPal, PayTM and PhonePe available?
 
 - intent: faq/return_policy
   examples: |
@@ -25,6 +27,7 @@ nlu:
     - when can I return something
     - guidelines for returning a product
     - return policy
+    - can I return product after 30 days of buying
 
 - intent: faq/track_product
   examples: |
@@ -33,3 +36,5 @@ nlu:
     - can you track my product
     - product tracking
     - process for tracking my product
+    - can I track my product using my phone number
+    
