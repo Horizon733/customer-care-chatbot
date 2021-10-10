@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  rasa:
+  rasa-customer-care:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
@@ -14,7 +14,7 @@ services:
     networks:
     - all
 
-  rasa-actions:
+  rasa-actions-customer-care:
     image: rasa-bot:latest
     working_dir: /app
     build: "./"
