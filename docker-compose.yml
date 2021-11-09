@@ -1,5 +1,13 @@
 version: '3.4'
 services:
+
+  duckling-server:
+    image: rasa/duckling:latest
+    ports:
+    - 8000:8000
+    networks:
+    - all
+
   rasa-server:
     image: rasa-bot:latest
     working_dir: /app
