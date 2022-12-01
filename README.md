@@ -33,6 +33,11 @@ virtualenv -p python3.7 rasaenv
 cd /customer-care-chatbot
 pipenv install
 ```
+- Install Rasa
+```bash
+python -m pip install -U pip
+pip install rasa
+```
 
 ## 🧪 Testing
 - Train bot
